@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iron_counter/features/splash/presentation/views/splash_view.dart';
 
-Route<dynamic> onGenerateRoute(RouteSettings settings) {
+Route<dynamic> onGenerateRoutes(RouteSettings settings) {
   switch (settings.name) {
 
     case SplashView.routeName:
