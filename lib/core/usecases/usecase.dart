@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import '../error/failures.dart';
+import 'package:iron_counter/core/error/failures.dart';
 
 // T = return type (e.g., List<Entity>, void)
 // P = parameters type (e.g., String, Entity, NoParams)
