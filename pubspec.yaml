@@ -40,6 +40,7 @@ dependencies:
   flutter_screenutil:
   equatable:
   dartz:
+  cached_network_image:
 
 
 dev_dependencies:
