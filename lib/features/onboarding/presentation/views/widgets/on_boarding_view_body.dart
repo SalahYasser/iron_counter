@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iron_counter/core/constants/app_colors.dart';
 import 'package:iron_counter/core/constants/app_strings.dart';
 import 'package:iron_counter/core/constants/app_urls.dart';
+import 'package:iron_counter/features/dashboard/presentation/views/dashboard_view.dart';
 
 class OnBoardingViewBody extends StatelessWidget {
   const OnBoardingViewBody({super.key});
@@ -60,7 +61,7 @@ class OnBoardingViewBody extends StatelessWidget {
 
           ElevatedButton(
             onPressed: () {
-
+              Navigator.pushNamed(context, DashboardView.routeName);
             },
             child: Text(AppStrings.onboardingButton),
           ),
