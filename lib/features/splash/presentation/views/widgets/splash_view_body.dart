@@ -15,7 +15,7 @@ class SplashViewBody extends StatelessWidget {
           const SizedBox(height: 24),
 
           Text(
-            'Iron Counter',
+            'IronCounter',
             style: Theme
                 .of(context)
                 .textTheme

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iron_counter/core/constants/app_colors.dart';
+import 'package:iron_counter/features/onboarding/presentation/views/on_boarding_view.dart';
 import 'package:iron_counter/features/splash/presentation/views/widgets/splash_view_body.dart';
 
 class SplashView extends StatefulWidget {
@@ -28,7 +29,7 @@ class _SplashViewState extends State<SplashView> {
 
   void executeNavigation() {
     Future.delayed(const Duration(seconds: 2), () {
-      Navigator.pushReplacementNamed(context, '/home');
+      Navigator.pushReplacementNamed(context, OnBoardingView.routeName);
     });
   }
 }
