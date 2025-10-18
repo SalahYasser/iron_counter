@@ -1,37 +1,35 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-  // --- Original Definitions (Preserved for compatibility) ---
 
-  static const Color primary = Color(0xFFFFCC00);
-  static const Color primaryDark = Color(0xFFC7A200);
-  static const Color accent = Color(0xFFE5E5E5);
+  static const Gradient kPrimaryGradient = LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    colors: [Color(0xFF4361EE), Color(0xFF3A0CA3)],
+  );
 
-  static const Color background = Color(0xFF000000);
-  static const Color surface = Color(0xFF1E1E1E);
+  static const Color kPrimary = Colors.blueAccent;
+  static const Color kPrimaryDark = Color(0xFF3A0CA3);
+  static const Color kAccent = Color(0xFFE5E5E5);
 
-  static const Color textPrimary = Color(0xFFFFFFFF);
-  static const Color textSecondary = accent;
+  static const Color kBackground = Color(0xFF000000);
+  static const Color kSurface = Color(0xFF1E1E1E);
 
+  static const Color kTextPrimary = Color(0xFFFFFFFF);
+  static const Color textSecondary = kAccent;
 
-  // --- New, Expanded Definitions (Added for clarity and completeness) ---
-  // Using 'k' prefix to distinguish and avoid conflicts with original names
-
-  // Brand Colors
-  static const Color kPrimary = primary; // Alias to original primary
-  static const Color kPrimaryDark = primaryDark; // Alias to original primaryDark
-  static const Color kAccent = accent; // Alias to original accent
-
-  // Background & Surface
   static const Color kBlack = Color(0xFF000000);
-  static const Color kBackground = background; // Alias to original background
-  static const Color kSurface = surface; // Alias to original surface
-  static const Color kSurfaceLight = Color(0xFF2C2C2C); // Slightly lighter surface for distinction
+  static const Color kSurfaceLight = Color(0xFF2C2C2C);
+
+  // workout types colors
+  static const Color kGym = Colors.amber;
+  static const Color kCardio = Colors.purple;
+  static const Color kLinks = Colors.green;
+  static const Color kFoods = Colors.red;
 
   // Text Colors
-  static const Color kTextPrimary = textPrimary; // Alias to original textPrimary
-  static const Color kTextSecondary = Color(0xFFB0B0B0); // Lighter gray for secondary text/hints
-  static const Color kTextHint = Color(0xFF6C6C6C); // Dark gray for hints and disabled text
+  static const Color kTextSecondary = Color(0xFFB0B0B0);
+  static const Color kTextHint = Color(0xFF6C6C6C);
 
   // Status & Utility Colors
   static const Color kSuccess = Color(0xFF4CAF50); // Green for successful actions/completions

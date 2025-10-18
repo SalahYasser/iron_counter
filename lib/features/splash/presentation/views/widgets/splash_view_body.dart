@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:iron_counter/core/constants/app_colors.dart';
 
 class SplashViewBody extends StatelessWidget {
@@ -11,7 +12,7 @@ class SplashViewBody extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
 
-          Icon(Icons.fitness_center, size: 80, color: AppColors.kPrimary),
+          Icon(FontAwesomeIcons.personRunning, size: 80, color: AppColors.kPrimary),
           const SizedBox(height: 24),
 
           Text(

@@ -41,6 +41,7 @@ dependencies:
   equatable:
   dartz:
   cached_network_image:
+  font_awesome_flutter:
 
 
 dev_dependencies:

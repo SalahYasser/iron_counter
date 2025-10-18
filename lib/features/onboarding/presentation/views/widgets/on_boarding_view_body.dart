@@ -26,17 +26,17 @@ class OnBoardingViewBody extends StatelessWidget {
                 height: 200.r,
                 placeholder: (context, url) => Container(
                   height: 200.r,
-                  color: AppColors.surface,
+                  color: AppColors.kSurface,
                   child: Center(
                     child: const CircularProgressIndicator(
-                      color: AppColors.primary,
+                      color: AppColors.kPrimary,
                     ),
                   ),
                 ),
                 errorWidget: (context, url, error) => Icon(
                   Icons.fitness_center,
                   size: 200.w,
-                  color: AppColors.primary,
+                  color: AppColors.kPrimary,
                 ),
               ),
             ),
@@ -45,9 +45,9 @@ class OnBoardingViewBody extends StatelessWidget {
 
           Text(
             AppStrings.onboardingTitle,
-            style: Theme.of(context).textTheme.titleLarge?.copyWith(
-              color: AppColors.primary,
-            ),
+            style: Theme.of(
+              context,
+            ).textTheme.titleLarge?.copyWith(color: AppColors.kPrimary),
             textAlign: TextAlign.center,
           ),
           SizedBox(height: 16.r),
@@ -63,10 +63,12 @@ class OnBoardingViewBody extends StatelessWidget {
             onPressed: () {
               Navigator.pushNamed(context, DashboardView.routeName);
             },
-            child: Text(AppStrings.onboardingButton),
+            child: Text(
+              AppStrings.onboardingButton,
+              style: TextStyle(color: AppColors.kAccent),
+            ),
           ),
           SizedBox(height: 20.r),
-
         ],
       ),
     );

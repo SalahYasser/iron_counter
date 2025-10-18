@@ -12,39 +12,39 @@ class AppTheme {
 
     return ThemeData(
       brightness: Brightness.dark,
-      primaryColor: AppColors.primary,
-      scaffoldBackgroundColor: AppColors.background,
+      primaryColor: AppColors.kPrimary,
+      scaffoldBackgroundColor: AppColors.kBackground,
 
       appBarTheme: const AppBarTheme(
-        backgroundColor: AppColors.background,
+        backgroundColor: AppColors.kBackground,
         elevation: 0,
-        foregroundColor: AppColors.textPrimary,
+        foregroundColor: AppColors.kTextPrimary,
       ),
 
       colorScheme: const ColorScheme.dark(
-        primary: AppColors.primary,
-        secondary: AppColors.primaryDark,
-        background: AppColors.background,
-        surface: AppColors.surface,
-        onSurface: AppColors.textPrimary,
+        primary: AppColors.kPrimary,
+        secondary: AppColors.kPrimaryDark,
+        background: AppColors.kBackground,
+        surface: AppColors.kSurface,
+        onSurface: AppColors.kTextPrimary,
       ),
 
       textTheme: textTheme.copyWith(
 
         titleLarge: textTheme.titleLarge!.copyWith(
-          color: AppColors.textPrimary,
+          color: AppColors.kTextPrimary,
           fontWeight: FontWeight.bold,
           fontSize: 24.sp,
         ),
 
         titleMedium: textTheme.titleMedium!.copyWith(
-          color: AppColors.textPrimary,
+          color: AppColors.kTextPrimary,
           fontWeight: FontWeight.bold,
           fontSize: 18.sp,
         ),
 
         bodyLarge: textTheme.bodyLarge!.copyWith(
-          color: AppColors.textPrimary,
+          color: AppColors.kTextPrimary,
           fontWeight: FontWeight.normal,
           fontSize: 16.sp,
         ),
@@ -58,8 +58,8 @@ class AppTheme {
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          backgroundColor: AppColors.primary,
-          foregroundColor: AppColors.background,
+          backgroundColor: AppColors.kPrimary,
+          foregroundColor: AppColors.kBackground,
           minimumSize: Size(double.infinity, 56.h),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8.0.r),
@@ -68,7 +68,7 @@ class AppTheme {
         ),
       ),
 
-      iconTheme: const IconThemeData(color: AppColors.primary),
+      iconTheme: const IconThemeData(color: AppColors.kPrimary),
     );
   }
 }
