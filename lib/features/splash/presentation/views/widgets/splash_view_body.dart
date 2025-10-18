@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:iron_counter/core/constants/app_colors.dart';
+import 'package:iron_counter/core/constants/app_strings.dart';
+import 'package:iron_counter/core/widgets/gradient_icon.dart';
+import 'package:iron_counter/core/widgets/gradient_text.dart';
 
 class SplashViewBody extends StatelessWidget {
   const SplashViewBody({super.key});
@@ -11,19 +14,22 @@ class SplashViewBody extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-
-          Icon(FontAwesomeIcons.personRunning, size: 80, color: AppColors.kPrimary),
+          GradientIcon(
+            icon: FontAwesomeIcons.personRunning,
+            size: 80,
+            gradient: LinearGradient(
+              colors: [AppColors.kPrimaryDark, AppColors.kPrimary],
+            ),
+          ),
           const SizedBox(height: 24),
 
-          Text(
-            'IronCounter',
-            style: Theme
-                .of(context)
-                .textTheme
-                .headlineMedium
-                ?.copyWith(
-              color: AppColors.kTextPrimary,
+          GradientText(
+            text: AppStrings.appName,
+            style: Theme.of(context).textTheme.headlineMedium?.copyWith(
               fontWeight: FontWeight.bold,
+            ),
+            gradient: LinearGradient(
+              colors: [AppColors.kPrimaryDark, AppColors.kPrimary],
             ),
           ),
           const SizedBox(height: 48),
