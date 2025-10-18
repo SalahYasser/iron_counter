@@ -1,6 +1,6 @@
 class AppStrings {
 
-  static const String appName = 'FitTracker';
+  static const String appName = 'Training Sync';
   static const String splashTagline = 'Your Fitness Journey Starts Here';
   static const String onboardingTitle = 'Ready to Transform?';
   static const String onboardingSubtitle =

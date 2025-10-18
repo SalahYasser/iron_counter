@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iron_counter/core/constants/app_colors.dart';
 import 'package:iron_counter/core/constants/app_strings.dart';
 
 class CustomAppBar extends StatelessWidget {
@@ -9,11 +10,7 @@ class CustomAppBar extends StatelessWidget {
     return SafeArea(
       child: Container(
         decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [Color(0xFF4361EE), Color(0xFF3A0CA3)],
-          ),
+          gradient: AppColors.kPrimaryGradient,
           borderRadius: BorderRadius.only(
             bottomLeft: Radius.circular(16),
             bottomRight: Radius.circular(16),

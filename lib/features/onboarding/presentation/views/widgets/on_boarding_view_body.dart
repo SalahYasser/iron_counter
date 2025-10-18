@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iron_counter/core/constants/app_colors.dart';
 import 'package:iron_counter/core/constants/app_strings.dart';
 import 'package:iron_counter/core/constants/app_urls.dart';
+import 'package:iron_counter/core/widgets/gradient_button.dart';
 import 'package:iron_counter/features/dashboard/presentation/views/dashboard_view.dart';
 
 class OnBoardingViewBody extends StatelessWidget {
@@ -47,7 +48,7 @@ class OnBoardingViewBody extends StatelessWidget {
             AppStrings.onboardingTitle,
             style: Theme.of(
               context,
-            ).textTheme.titleLarge?.copyWith(color: AppColors.kPrimary),
+            ).textTheme.titleLarge?.copyWith(color: AppColors.kPrimary ),
             textAlign: TextAlign.center,
           ),
           SizedBox(height: 16.r),
@@ -59,14 +60,12 @@ class OnBoardingViewBody extends StatelessWidget {
           ),
           const Spacer(flex: 3),
 
-          ElevatedButton(
+          GradientButton(
             onPressed: () {
               Navigator.pushNamed(context, DashboardView.routeName);
             },
-            child: Text(
-              AppStrings.onboardingButton,
-              style: TextStyle(color: AppColors.kAccent),
-            ),
+            buttonText: AppStrings.onboardingButton,
+            textColor: AppColors.kTextPrimary,
           ),
           SizedBox(height: 20.r),
         ],
