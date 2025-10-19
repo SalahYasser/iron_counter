@@ -15,8 +15,8 @@ class SplashBackground extends StatelessWidget {
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [
-            AppColors.test6,
-            AppColors.test5,
+            AppColors.kPurple7,
+            AppColors.kPurple6,
           ],
         ),
       ),

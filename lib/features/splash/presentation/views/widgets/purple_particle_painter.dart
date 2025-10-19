@@ -47,10 +47,10 @@ class PurpleParticle {
     speed = random.nextDouble() * 0.2 + 0.1;
 
     final purpleShades = [
-      AppColors.test0,
-      AppColors.test1,
-      AppColors.test2,
-      AppColors.test3,
+      AppColors.kPurple1,
+      AppColors.kPurple2,
+      AppColors.kPurple3,
+      AppColors.kPurple4,
     ];
     color = purpleShades[random.nextInt(purpleShades.length)];
   }

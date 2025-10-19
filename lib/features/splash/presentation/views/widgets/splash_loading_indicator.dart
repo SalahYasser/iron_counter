@@ -22,7 +22,7 @@ class SplashLoadingIndicator extends StatelessWidget {
             child: LinearProgressIndicator(
               backgroundColor: Colors.white.withOpacity(0.3),
               valueColor: AlwaysStoppedAnimation<Color>(
-                AppColors.test1.withOpacity(0.8),
+                AppColors.kPurple2.withOpacity(0.8),
               ),
               borderRadius: BorderRadius.circular(10),
             ),

@@ -8,13 +8,13 @@ class AppColors {
     colors: [Color(0xFF4A148C), Color(0xFFBA68C8)],
   );
 
-  static const Color test0 = Color(0xFFE0AAFF);
-  static const Color test1 = Color(0xFFC77DFF);
-  static const Color test2 = Color(0xFF9D4EDD);
-  static const Color test3 = Color(0xFF7B2CBF);
-  static const Color test4 = Color(0xFF5A189A);
-  static const Color test5 = Color(0xFF2D1B69);
-  static const Color test6 = Color(0xFF1A0B2E);
+  static const Color kPurple1 = Color(0xFFE0AAFF);
+  static const Color kPurple2 = Color(0xFFC77DFF);
+  static const Color kPurple3 = Color(0xFF9D4EDD);
+  static const Color kPurple4 = Color(0xFF7B2CBF);
+  static const Color kPurple5 = Color(0xFF5A189A);
+  static const Color kPurple6 = Color(0xFF2D1B69);
+  static const Color kPurple7 = Color(0xFF1A0B2E);
 
   static const Color kPrimary = Color(0xFFBA68C8);
   static const Color kPrimaryDark = Color(0xFF6A1B9A);

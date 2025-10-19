@@ -1,52 +1,8 @@
-// import 'package:flutter/material.dart';
-// import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-// import 'package:iron_counter/core/constants/app_colors.dart';
-// import 'package:iron_counter/core/constants/app_strings.dart';
-// import 'package:iron_counter/core/widgets/gradient_icon.dart';
-// import 'package:iron_counter/core/widgets/gradient_text.dart';
-//
-// class SplashViewBody extends StatelessWidget {
-//   const SplashViewBody({super.key});
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return Center(
-//       child: Column(
-//         mainAxisAlignment: MainAxisAlignment.center,
-//         children: [
-//           GradientIcon(
-//             icon: FontAwesomeIcons.personRunning,
-//             size: 80,
-//             gradient: LinearGradient(
-//               colors: [AppColors.kPrimaryDark, AppColors.kPrimary],
-//             ),
-//           ),
-//           const SizedBox(height: 24),
-//
-//           GradientText(
-//             text: AppStrings.appName,
-//             style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-//               fontWeight: FontWeight.bold,
-//             ),
-//             gradient: LinearGradient(
-//               colors: [AppColors.kPrimaryDark, AppColors.kPrimary],
-//             ),
-//           ),
-//           const SizedBox(height: 48),
-//
-//           const CircularProgressIndicator(
-//             color: AppColors.kPrimary,
-//           ),
-//         ],
-//       ),
-//     );
-//   }
-// }
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:iron_counter/core/constants/app_colors.dart';
 import 'package:iron_counter/core/constants/app_strings.dart';
+import 'package:iron_counter/core/widgets/gradient_text.dart';
 import 'package:iron_counter/features/splash/presentation/manager/cubit/splash_cubit.dart';
 import 'package:iron_counter/features/splash/presentation/manager/cubit/splash_state.dart';
 import 'package:iron_counter/features/splash/presentation/views/widgets/splash_background.dart';
@@ -105,22 +61,38 @@ class _AppNameText extends StatelessWidget {
       children: [
         // This would use your GradientText widget with AppStrings
         // For now, using placeholder text
-        Text(
-          AppStrings.firstAppName,
+        GradientText(
+          text: AppStrings.firstAppName,
           style: TextStyle(
             fontSize: 32,
             fontWeight: FontWeight.w300,
             letterSpacing: 4,
-            color: Colors.white,
+          ),
+          gradient: LinearGradient(
+            colors: [
+              AppColors.kPurple1,
+              AppColors.kPurple2,
+            ],
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
           ),
         ),
-        Text(
-          AppStrings.lastAppName,
+
+        GradientText(
+          text: AppStrings.lastAppName,
           style: TextStyle(
             fontSize: 32,
             fontWeight: FontWeight.w800,
             letterSpacing: 4,
-            color: AppColors.kTextPrimary,
+          ),
+          gradient: LinearGradient(
+            colors: [
+              AppColors.kPurple3,
+              AppColors.kPurple4,
+              AppColors.kPurple5,
+            ],
+            begin: Alignment.centerLeft,
+            end: Alignment.centerRight,
           ),
         ),
       ],

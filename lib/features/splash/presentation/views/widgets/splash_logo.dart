@@ -21,9 +21,9 @@ class SplashLogo extends StatelessWidget {
         decoration: BoxDecoration(
           gradient: const LinearGradient(
             colors: [
-              AppColors.test2,
-              AppColors.test3,
-              AppColors.test4,
+              AppColors.kPurple3,
+              AppColors.kPurple4,
+              AppColors.kPurple5,
             ],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
@@ -31,7 +31,7 @@ class SplashLogo extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
           boxShadow: [
             BoxShadow(
-              color: AppColors.test2.withOpacity(0.5),
+              color: AppColors.kPurple3.withOpacity(0.5),
               blurRadius: 20,
               offset: const Offset(0, 10),
             ),
