@@ -6,6 +6,9 @@ class PurpleParticlePainter extends CustomPainter {
   PurpleParticlePainter()
       : particles = List.generate(25, (index) => PurpleParticle());
 
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) => true;
+
   final List<PurpleParticle> particles;
 
   @override
@@ -22,8 +25,6 @@ class PurpleParticlePainter extends CustomPainter {
     }
   }
 
-  @override
-  bool shouldRepaint(covariant CustomPainter oldDelegate) => true;
 }
 
 class PurpleParticle {

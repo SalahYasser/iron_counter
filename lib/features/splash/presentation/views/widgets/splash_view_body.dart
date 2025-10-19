@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:iron_counter/core/constants/app_colors.dart';
-import 'package:iron_counter/core/constants/app_strings.dart';
-import 'package:iron_counter/core/widgets/gradient_text.dart';
 import 'package:iron_counter/features/splash/presentation/manager/cubit/splash_cubit.dart';
 import 'package:iron_counter/features/splash/presentation/manager/cubit/splash_state.dart';
+import 'package:iron_counter/features/splash/presentation/views/widgets/app_name_text.dart';
 import 'package:iron_counter/features/splash/presentation/views/widgets/splash_background.dart';
 import 'package:iron_counter/features/splash/presentation/views/widgets/splash_logo.dart';
 import 'package:iron_counter/features/splash/presentation/views/widgets/splash_loading_indicator.dart';
@@ -32,7 +30,7 @@ class SplashViewBody extends StatelessWidget {
                   const SizedBox(height: 40),
 
                   // App name with gradient (fade animation)
-                  _buildAppName(state.opacity),
+                  buildAppName(state.opacity),
 
                   const SizedBox(height: 20),
 
@@ -44,58 +42,6 @@ class SplashViewBody extends StatelessWidget {
           ],
         );
       },
-    );
-  }
-
-  Widget _buildAppName(double opacity) {
-    return Opacity(opacity: opacity, child: const _AppNameText());
-  }
-}
-
-class _AppNameText extends StatelessWidget {
-  const _AppNameText();
-
-  @override
-  Widget build(BuildContext context) {
-    return const Column(
-      children: [
-        // This would use your GradientText widget with AppStrings
-        // For now, using placeholder text
-        GradientText(
-          text: AppStrings.firstAppName,
-          style: TextStyle(
-            fontSize: 32,
-            fontWeight: FontWeight.w300,
-            letterSpacing: 4,
-          ),
-          gradient: LinearGradient(
-            colors: [
-              AppColors.kPurple1,
-              AppColors.kPurple2,
-            ],
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-          ),
-        ),
-
-        GradientText(
-          text: AppStrings.lastAppName,
-          style: TextStyle(
-            fontSize: 32,
-            fontWeight: FontWeight.w800,
-            letterSpacing: 4,
-          ),
-          gradient: LinearGradient(
-            colors: [
-              AppColors.kPurple3,
-              AppColors.kPurple4,
-              AppColors.kPurple5,
-            ],
-            begin: Alignment.centerLeft,
-            end: Alignment.centerRight,
-          ),
-        ),
-      ],
     );
   }
 }
