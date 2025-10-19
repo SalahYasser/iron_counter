@@ -1,7 +1,10 @@
 class AppStrings {
 
   static const String appName = 'Training Sync';
-  static const String splashTagline = 'Your Fitness Journey Starts Here';
+  static const String firstAppName = 'Training';
+  static const String lastAppName = 'Sync';
+  static const String splashTagline = 'Your Fitness Journey Starts Here...';
+  static const String splashTaglineBottom = 'Elevate Your Fitness';
   static const String onboardingTitle = 'Ready to Transform?';
   static const String onboardingSubtitle =
       'Start your fitness journey with personalized workouts and track your progress like never before.';

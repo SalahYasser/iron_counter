@@ -42,6 +42,7 @@ dependencies:
   dartz:
   cached_network_image:
   font_awesome_flutter:
+  flutter_bloc:
 
 
 dev_dependencies:
