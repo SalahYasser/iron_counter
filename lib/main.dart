@@ -4,7 +4,12 @@ import 'package:iron_counter/core/helper_functions/on_generate_routes.dart';
 import 'package:iron_counter/core/theme/app_theme.dart';
 import 'package:iron_counter/features/splash/presentation/views/splash_view.dart';
 
-void main() {
+import 'core/services/get_it_service.dart';
+
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await setupGetIt();
   runApp(const MyApp());
 }
 

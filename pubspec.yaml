@@ -43,6 +43,7 @@ dependencies:
   cached_network_image:
   font_awesome_flutter:
   flutter_bloc:
+  get_it:
 
 
 dev_dependencies:
