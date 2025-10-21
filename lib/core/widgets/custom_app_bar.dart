@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iron_counter/core/constants/app_colors.dart';
 import 'package:iron_counter/core/constants/app_strings.dart';
+import 'package:iron_counter/core/constants/app_styles.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({super.key});
@@ -9,42 +11,32 @@ class CustomAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Container(
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           gradient: AppColors.kPrimaryGradient,
           borderRadius: BorderRadius.only(
-            bottomLeft: Radius.circular(16),
-            bottomRight: Radius.circular(16),
+            bottomLeft: Radius.circular(12.r),
+            bottomRight: Radius.circular(12.r),
           ),
         ),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
+          padding: EdgeInsets.symmetric(horizontal: 18.w, vertical: 4.h),
           child: Row(
             children: [
               // App logo and title
-              const Expanded(
+              Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
                       AppStrings.dashboardTitle,
-                      style: TextStyle(
-                        fontSize: 28,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                        fontFamily: 'Roboto',
-                        letterSpacing: 0.5,
-                      ),
+                      style: AppStyles.dashboardTitle,
                     ),
-                    SizedBox(height: 4),
+                    SizedBox(height: 4.h),
+
                     Text(
                       AppStrings.chooseWorkoutType,
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: Colors.white70,
-                        fontFamily: 'Roboto',
-                        fontWeight: FontWeight.w500,
-                      ),
+                      style: AppStyles.dashboardSubtitle,
                     ),
                   ],
                 ),

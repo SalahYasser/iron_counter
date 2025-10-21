@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iron_counter/core/helper_functions/build_app_name.dart';
 import 'package:iron_counter/features/splash/presentation/manager/cubit/splash_cubit.dart';
 import 'package:iron_counter/features/splash/presentation/manager/cubit/splash_state.dart';
@@ -27,12 +28,12 @@ class SplashViewBody extends StatelessWidget {
                   // Logo with animation
                   SplashLogo(scale: state.scale),
 
-                  const SizedBox(height: 40),
+                   SizedBox(height: 30.h),
 
                   // App name with gradient (fade animation)
                   buildAppName(state.opacity),
 
-                  const SizedBox(height: 20),
+                  SizedBox(height: 14.h),
 
                   // Loading indicator
                   SplashLoadingIndicator(opacity: state.opacity),

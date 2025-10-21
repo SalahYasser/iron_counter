@@ -21,12 +21,12 @@ class GradientButton extends StatelessWidget {
       decoration: BoxDecoration(
         gradient: AppColors.kPrimaryGradient,
         borderRadius: BorderRadius.circular(16.r),
-        border: Border.all(color: AppColors.kTextPrimary, width: 1),
+        border: Border.all(color: AppColors.kTextPrimary, width: 1.w),
         boxShadow: [
           BoxShadow(
-            color: AppColors.kTextPrimary.withOpacity(0.3),
+            color: AppColors.kTextPrimary.withOpacity(0.3.h),
             blurRadius: 8,
-            offset: const Offset(0, 2),
+            offset: Offset(0, 1.h),
           ),
         ],
       ),
@@ -38,7 +38,7 @@ class GradientButton extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(16.r),
           ),
-          padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 24),
+          padding: EdgeInsets.symmetric(vertical: 12.h, horizontal: 24.w),
         ),
         onPressed: onPressed,
         child: Text(

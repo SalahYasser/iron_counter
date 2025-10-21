@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class GradientText extends StatelessWidget {
   const GradientText({
@@ -19,7 +20,7 @@ class GradientText extends StatelessWidget {
     return ShaderMask(
       blendMode: BlendMode.srcIn,
       shaderCallback: (bounds) => gradient.createShader(
-        Rect.fromLTWH(0, 0, bounds.width, bounds.height),
+        Rect.fromLTWH(0, 0, bounds.width.w, bounds.height.h),
       ),
       child: Text(text, style: style, textAlign: textAlign),
     );

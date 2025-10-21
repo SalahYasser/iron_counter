@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iron_counter/core/constants/app_colors.dart';
 import 'package:iron_counter/core/constants/app_strings.dart';
 import 'package:iron_counter/core/constants/app_styles.dart';
@@ -23,13 +24,13 @@ class DashboardViewBody extends StatelessWidget {
                 // Categories Grid
                 Expanded(
                   child: GridView(
-                    padding: const EdgeInsets.all(8),
+                    padding: EdgeInsets.all(6.w),
                     gridDelegate:
-                        const SliverGridDelegateWithFixedCrossAxisCount(
+                         SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 2,
-                          crossAxisSpacing: 16,
-                          mainAxisSpacing: 16,
-                          childAspectRatio: 0.9,
+                          crossAxisSpacing: 12.r,
+                          mainAxisSpacing: 12.r,
+                          childAspectRatio: 0.7.w,
                         ),
                     children: [
 

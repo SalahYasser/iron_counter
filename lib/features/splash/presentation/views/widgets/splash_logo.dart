@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:iron_counter/core/constants/app_colors.dart';
 import 'package:iron_counter/core/helper_functions/build_linear_gradient.dart';
@@ -17,8 +18,8 @@ class SplashLogo extends StatelessWidget {
       scale: scale,
 
       child: Container(
-        width: 100,
-        height: 100,
+        width: 80.w,
+        height: 72.h,
         decoration: BoxDecoration(
           gradient: buildLinearGradient(
             colors: [
@@ -27,12 +28,12 @@ class SplashLogo extends StatelessWidget {
               AppColors.kPurple7,
             ],
           ),
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(14.r),
           boxShadow: [
             BoxShadow(
               color: AppColors.kPurple4.withOpacity(0.5),
               blurRadius: 20,
-              offset: const Offset(0, 10),
+              offset: Offset(0, 7.r),
             ),
           ],
         ),
@@ -40,7 +41,7 @@ class SplashLogo extends StatelessWidget {
         child: Icon(
           FontAwesomeIcons.dumbbell,
           color: AppColors.kTextPrimary,
-          size: 36,
+          size: 30.sp,
         ),
       ),
     );

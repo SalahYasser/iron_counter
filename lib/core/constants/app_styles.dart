@@ -7,17 +7,17 @@ class AppStyles {
   static const String fontFamily = 'Roboto';
 
   // Splash Screen Text Styles
-  static const TextStyle splashFirstAppName = TextStyle(
+  static TextStyle get splashFirstAppName => TextStyle(
     fontFamily: fontFamily,
-    fontSize: 32,
+    fontSize: 26.sp, // Large title, can benefit from scaling
     fontWeight: FontWeight.w400,
     letterSpacing: 5,
     color: AppColors.kTextSecondary,
   );
 
-  static const TextStyle splashLastAppName = TextStyle(
+  static TextStyle splashLastAppName = TextStyle(
     fontFamily: fontFamily,
-    fontSize: 32,
+    fontSize: 26.sp,
     fontWeight: FontWeight.w800,
     letterSpacing: 3,
     color: AppColors.kTextSecondary,
@@ -25,21 +25,21 @@ class AppStyles {
 
   static final TextStyle splashTagline = TextStyle(
     fontFamily: fontFamily,
-    fontSize: 14,
+    fontSize: 12.sp,
     fontWeight: FontWeight.w600,
     color: AppColors.kDisabledTextPrimary,
   );
 
   static TextStyle splashTaglineBottom = TextStyle(
     fontFamily: fontFamily,
-    fontSize: 14,
+    fontSize: 12.sp,
     fontWeight: FontWeight.w500,
     color: AppColors.kDisabledTextPrimary,
   );
 
   static TextStyle versionText = TextStyle(
     fontFamily: fontFamily,
-    fontSize: 12,
+    fontSize: 10.sp,
     color: AppColors.kDisabledTextPrimary,
   );
 
@@ -51,9 +51,9 @@ class AppStyles {
     color: AppColors.kPrimary,
   );
 
-  static const TextStyle onboardingSubtitle = TextStyle(
+  static TextStyle onboardingSubtitle = TextStyle(
     fontFamily: fontFamily,
-    fontSize: 16, // Based on bodyMedium from theme
+    fontSize: 14.sp, // Based on bodyMedium from theme
     fontWeight: FontWeight.w400,
     color: AppColors.kTextPrimary, // Default color, can be overridden
   );
@@ -66,18 +66,18 @@ class AppStyles {
   );
 
   // Common Text Styles
-  static const TextStyle headlineLarge = TextStyle(
+  static TextStyle headlineLarge = TextStyle(
     fontFamily: fontFamily,
-    fontSize: 32,
+    fontSize: 26.sp,
     fontWeight: FontWeight.w800,
     letterSpacing: 1.5,
   );
 
-  static TextStyle headlineMedium = TextStyle(
+  static TextStyle dashboardTitle = TextStyle(
     fontFamily: fontFamily,
-    fontSize: 24.sp,
+    fontSize: 22.sp,
     fontWeight: FontWeight.w700,
-    letterSpacing: 1.2,
+    letterSpacing: 0.5,
   );
 
   static TextStyle headlineSmall = TextStyle(
@@ -95,30 +95,31 @@ class AppStyles {
     letterSpacing: 0.8,
   );
 
-  static const TextStyle titleMedium = TextStyle(
+  static TextStyle titleMedium = TextStyle(
     fontFamily: fontFamily,
-    fontSize: 16,
+    fontSize: 14.sp,
     fontWeight: FontWeight.w500,
     letterSpacing: 0.5,
   );
 
-  static const TextStyle titleSmall = TextStyle(
+  static TextStyle dashboardSubtitle = TextStyle(
     fontFamily: fontFamily,
-    fontSize: 14,
+    fontSize: 13.sp,
     fontWeight: FontWeight.w500,
-    letterSpacing: 0.3,
+    color: AppColors.kDisabledTextPrimary,
+    // letterSpacing: 0.9,
   );
 
-  static const TextStyle bodyLarge = TextStyle(
+  static TextStyle bodyLarge = TextStyle(
     fontFamily: fontFamily,
-    fontSize: 16,
+    fontSize: 14.sp,
     fontWeight: FontWeight.w400,
     letterSpacing: 0.2,
   );
 
-  static const TextStyle bodyMedium = TextStyle(
+  static TextStyle bodyMedium = TextStyle(
     fontFamily: fontFamily,
-    fontSize: 14,
+    fontSize: 12.sp,
     fontWeight: FontWeight.w400,
     letterSpacing: 0.1,
   );
@@ -132,47 +133,47 @@ class AppStyles {
     height: 1.3,
   );
 
-  static const TextStyle labelLarge = TextStyle(
+  static TextStyle labelLarge = TextStyle(
     fontFamily: fontFamily,
-    fontSize: 14,
+    fontSize: 12.sp,
     fontWeight: FontWeight.w500,
     letterSpacing: 0.4,
   );
 
-  static const TextStyle labelMedium = TextStyle(
+  static TextStyle labelMedium = TextStyle(
     fontFamily: fontFamily,
-    fontSize: 12,
+    fontSize: 10.sp,
     fontWeight: FontWeight.w500,
     letterSpacing: 0.3,
   );
 
-  static const TextStyle labelSmall = TextStyle(
+  static TextStyle labelSmall = TextStyle(
     fontFamily: fontFamily,
-    fontSize: 10,
+    fontSize: 8.sp,
     fontWeight: FontWeight.w500,
     letterSpacing: 0.2,
   );
 
   // Button Styles
-  static const TextStyle buttonPrimary = TextStyle(
+  static TextStyle buttonPrimary = TextStyle(
     fontFamily: fontFamily,
-    fontSize: 16,
+    fontSize: 14.sp,
     fontWeight: FontWeight.w600,
     letterSpacing: 0.8,
     color: AppColors.kTextSecondary,
   );
 
-  static const TextStyle buttonSecondary = TextStyle(
+  static TextStyle buttonSecondary = TextStyle(
     fontFamily: fontFamily,
-    fontSize: 14,
+    fontSize: 12.sp,
     fontWeight: FontWeight.w500,
     letterSpacing: 0.5,
   );
 
   // Gradient Text Base Style
-  static const TextStyle gradientTextBase = TextStyle(
+  static TextStyle gradientTextBase = TextStyle(
     fontFamily: fontFamily,
-    fontSize: 32,
+    fontSize: 26.sp,
     fontWeight: FontWeight.w300,
     letterSpacing: 5,
   );

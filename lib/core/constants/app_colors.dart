@@ -91,8 +91,8 @@ class AppColors {
   static final Color kFoods = Colors.red;
 
   // Status & Utility Colors
-  static const Color kSuccess = Color(0xFF4CAF50); // Green for successful actions/completions
-  static const Color kWarning = Color(0xFFFF9800); // Orange/Amber for warnings
-  static const Color kDanger = Color(0xFFF44336); // Red for errors, deletion, or critical actions
-  static const Color kDisabled = Color(0xFF333333); // Very dark gray for disabled buttons/elements
+  static const Color kSuccess = Color(0xFF4CAF50); // successful
+  static const Color kWarning = Color(0xFFFF9800); // warnings
+  static const Color kDanger = Color(0xFFF44336); // errors, deletion, or critical actions
+  static const Color kDisabled = Color(0xFF333333); // disabled buttons/elements
 }

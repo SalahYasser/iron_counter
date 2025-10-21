@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iron_counter/core/constants/app_colors.dart';
 import 'package:iron_counter/core/constants/app_strings.dart';
 import 'package:iron_counter/core/constants/app_styles.dart';
@@ -11,32 +12,19 @@ class SplashBackground extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-
       decoration: BoxDecoration(
         gradient: buildLinearGradient(
-          colors: [
-            AppColors.kPurple10,
-            AppColors.kPurple9,
-          ],
+          colors: [AppColors.kPurple10, AppColors.kPurple9],
         ),
       ),
 
       child: Stack(
         children: [
           // Purple Particle Background
-          Positioned.fill(
-            child: CustomPaint(
-              painter: PurpleParticlePainter(),
-            ),
-          ),
+          Positioned.fill(child: CustomPaint(painter: PurpleParticlePainter())),
 
           // Version Info
-          const Positioned(
-            bottom: 30,
-            left: 0,
-            right: 0,
-            child: _VersionInfo(),
-          ),
+          Positioned(bottom: 24.h, left: 0, right: 0, child: _VersionInfo()),
         ],
       ),
     );
@@ -54,12 +42,9 @@ class _VersionInfo extends StatelessWidget {
           AppStrings.splashTaglineBottom,
           style: AppStyles.splashTaglineBottom,
         ),
-        const SizedBox(height: 8),
+        SizedBox(height: 6.h),
 
-        Text(
-          'Version 1.0.0',
-          style: AppStyles.versionText,
-        ),
+        Text('Version 1.0.0', style: AppStyles.versionText),
       ],
     );
   }

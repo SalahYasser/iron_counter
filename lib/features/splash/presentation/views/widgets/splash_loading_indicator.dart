@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iron_counter/core/constants/app_colors.dart';
 import 'package:iron_counter/core/constants/app_strings.dart';
 import 'package:iron_counter/core/constants/app_styles.dart';
@@ -19,16 +20,16 @@ class SplashLoadingIndicator extends StatelessWidget {
         children: [
 
           SizedBox(
-            width: 100,
+            width: 80.w,
             child: LinearProgressIndicator(
               backgroundColor: Colors.white.withOpacity(0.3),
               valueColor: AlwaysStoppedAnimation<Color>(
                 AppColors.kPurple2.withOpacity(0.8),
               ),
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(8.r),
             ),
           ),
-          const SizedBox(height: 16),
+          SizedBox(height: 10.h),
 
           Text(
             AppStrings.splashTagline,
