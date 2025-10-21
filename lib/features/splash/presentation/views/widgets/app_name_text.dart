@@ -31,9 +31,9 @@ class AppNameText extends StatelessWidget {
           style: AppStyles.splashLastAppName,
           gradient: buildLinearGradient(
             colors: [
-              AppColors.kPurple3,
               AppColors.kPurple4,
               AppColors.kPurple5,
+              AppColors.kPurple7,
             ],
           ),
         ),

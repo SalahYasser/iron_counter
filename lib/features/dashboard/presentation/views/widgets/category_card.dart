@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iron_counter/core/constants/app_colors.dart';
+import 'package:iron_counter/core/helper_functions/build_linear_gradient.dart';
 
 class CategoryCard extends StatelessWidget {
   const CategoryCard({
@@ -11,6 +12,7 @@ class CategoryCard extends StatelessWidget {
     required this.iconColor,
     required this.titleStyle,
     required this.subtitleStyle,
+    this.gradientColors,
   });
 
   final String title;
@@ -20,6 +22,7 @@ class CategoryCard extends StatelessWidget {
   final Color iconColor;
   final TextStyle titleStyle;
   final TextStyle subtitleStyle;
+  final List<Color>? gradientColors;
 
   @override
   Widget build(BuildContext context) {
@@ -30,6 +33,15 @@ class CategoryCard extends StatelessWidget {
         decoration: BoxDecoration(
           color: color,
           borderRadius: BorderRadius.circular(16),
+          gradient: gradientColors != null
+              ? buildLinearGradient(colors: gradientColors!)
+              : buildLinearGradient(
+                  colors: [
+                    color.withOpacity(0.9),
+                    color,
+                    color.withOpacity(0.8),
+                  ],
+                ),
           boxShadow: [
             BoxShadow(
               color: color.withOpacity(0.3),
@@ -56,7 +68,7 @@ class CategoryCard extends StatelessWidget {
                     width: 50,
                     height: 50,
                     decoration: BoxDecoration(
-                      color: AppColors.kDisabledTextPrimary,
+                      color: AppColors.kDisabledTextPrimary.withOpacity(0.4),
                       shape: BoxShape.circle,
                     ),
                     child: Icon(icon, color: iconColor, size: 28),

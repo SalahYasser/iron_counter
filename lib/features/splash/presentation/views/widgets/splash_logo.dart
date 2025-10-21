@@ -22,15 +22,15 @@ class SplashLogo extends StatelessWidget {
         decoration: BoxDecoration(
           gradient: buildLinearGradient(
             colors: [
-              AppColors.kPurple3,
               AppColors.kPurple4,
               AppColors.kPurple5,
+              AppColors.kPurple7,
             ],
           ),
           borderRadius: BorderRadius.circular(20),
           boxShadow: [
             BoxShadow(
-              color: AppColors.kPurple3.withOpacity(0.5),
+              color: AppColors.kPurple4.withOpacity(0.5),
               blurRadius: 20,
               offset: const Offset(0, 10),
             ),

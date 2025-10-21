@@ -50,8 +50,8 @@ class PurpleParticle {
     final purpleShades = [
       AppColors.kPurple1,
       AppColors.kPurple2,
-      AppColors.kPurple3,
       AppColors.kPurple4,
+      AppColors.kPurple5,
     ];
     color = purpleShades[random.nextInt(purpleShades.length)];
   }
