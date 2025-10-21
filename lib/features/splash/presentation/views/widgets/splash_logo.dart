@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:iron_counter/core/constants/app_colors.dart';
+import 'package:iron_counter/core/helper_functions/build_linear_gradient.dart';
 
 class SplashLogo extends StatelessWidget {
   const SplashLogo({
@@ -19,14 +20,12 @@ class SplashLogo extends StatelessWidget {
         width: 100,
         height: 100,
         decoration: BoxDecoration(
-          gradient: const LinearGradient(
+          gradient: buildLinearGradient(
             colors: [
               AppColors.kPurple3,
               AppColors.kPurple4,
               AppColors.kPurple5,
             ],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
           ),
           borderRadius: BorderRadius.circular(20),
           boxShadow: [

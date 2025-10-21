@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:iron_counter/core/constants/app_colors.dart';
 import 'package:iron_counter/core/constants/app_strings.dart';
+import 'package:iron_counter/core/constants/app_styles.dart';
+import 'package:iron_counter/core/helper_functions/build_linear_gradient.dart';
 import 'package:iron_counter/core/widgets/gradient_text.dart';
 
 class AppNameText extends StatelessWidget {
@@ -8,55 +10,34 @@ class AppNameText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        // First half of app name (light gradient)
+        // First half of app name "TRAINING" (light gradient)
         GradientText(
           text: AppStrings.firstAppName,
-          style: TextStyle(
-            fontSize: 32,
-            fontWeight: FontWeight.w300,
-            letterSpacing: 4,
-          ),
-          gradient: LinearGradient(
+          style: AppStyles.splashFirstAppName,
+          gradient: buildLinearGradient(
             colors: [
               AppColors.kPurple1,
               AppColors.kPurple2,
             ],
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
           ),
         ),
 
-        // Second half of app name (stronger gradient)
+        // Second half of app name "SYNC" (stronger gradient)
         GradientText(
           text: AppStrings.lastAppName,
-          style: TextStyle(
-            fontSize: 32,
-            fontWeight: FontWeight.w800,
-            letterSpacing: 4,
-          ),
-          gradient: LinearGradient(
+          style: AppStyles.splashLastAppName,
+          gradient: buildLinearGradient(
             colors: [
               AppColors.kPurple3,
               AppColors.kPurple4,
               AppColors.kPurple5,
             ],
-            begin: Alignment.centerLeft,
-            end: Alignment.centerRight,
           ),
         ),
       ],
     );
   }
-}
-
-Widget buildAppName(double opacity) {
-  return AnimatedOpacity(
-    duration: const Duration(milliseconds: 400),
-    curve: Curves.easeInOut,
-    opacity: opacity,
-    child: const AppNameText(),
-  );
 }

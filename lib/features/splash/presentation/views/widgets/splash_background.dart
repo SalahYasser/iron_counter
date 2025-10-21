@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:iron_counter/core/constants/app_colors.dart';
 import 'package:iron_counter/core/constants/app_strings.dart';
+import 'package:iron_counter/core/constants/app_styles.dart';
+import 'package:iron_counter/core/helper_functions/build_linear_gradient.dart';
 import 'package:iron_counter/features/splash/presentation/views/widgets/purple_particle_painter.dart';
 
 class SplashBackground extends StatelessWidget {
@@ -10,10 +12,8 @@ class SplashBackground extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
 
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
+      decoration: BoxDecoration(
+        gradient: buildLinearGradient(
           colors: [
             AppColors.kPurple7,
             AppColors.kPurple6,
@@ -52,19 +52,13 @@ class _VersionInfo extends StatelessWidget {
       children: [
         Text(
           AppStrings.splashTaglineBottom,
-          style: TextStyle(
-            color: AppColors.kTextPrimary,
-            fontSize: 14,
-            fontWeight: FontWeight.w500,
-          ),
+          style: AppStyles.splashTaglineBottom,
         ),
-        SizedBox(height: 8),
+        const SizedBox(height: 8),
+
         Text(
           'Version 1.0.0',
-          style: TextStyle(
-            color: AppColors.kTextPrimary,
-            fontSize: 12,
-          ),
+          style: AppStyles.versionText,
         ),
       ],
     );

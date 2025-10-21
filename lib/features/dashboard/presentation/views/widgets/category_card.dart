@@ -9,6 +9,8 @@ class CategoryCard extends StatelessWidget {
     required this.icon,
     required this.color,
     required this.iconColor,
+    required this.titleStyle,
+    required this.subtitleStyle,
   });
 
   final String title;
@@ -16,6 +18,8 @@ class CategoryCard extends StatelessWidget {
   final IconData icon;
   final Color color;
   final Color iconColor;
+  final TextStyle titleStyle;
+  final TextStyle subtitleStyle;
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +56,7 @@ class CategoryCard extends StatelessWidget {
                     width: 50,
                     height: 50,
                     decoration: BoxDecoration(
-                      color: Colors.white.withOpacity(0.6),
+                      color: AppColors.kDisabledTextPrimary,
                       shape: BoxShape.circle,
                     ),
                     child: Icon(icon, color: iconColor, size: 28),
@@ -62,27 +66,12 @@ class CategoryCard extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        title,
-                        style: const TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'Roboto',
-                          // color: Colors.white,
-                          color: AppColors.kBlack,
-                        ),
-                      ),
+                      Text(title, style: titleStyle),
                       const SizedBox(height: 4),
 
                       Text(
                         subtitle,
-                        style: TextStyle(
-                          fontSize: 12,
-                          color: AppColors.kBlack,
-                          fontFamily: 'Roboto',
-                          // color: Colors.white.withOpacity(0.8),
-                          height: 1.3,
-                        ),
+                        style: subtitleStyle,
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
                       ),

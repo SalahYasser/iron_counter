@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iron_counter/core/constants/app_colors.dart';
 import 'package:iron_counter/core/constants/app_strings.dart';
+import 'package:iron_counter/core/constants/app_styles.dart';
 
 class SplashLoadingIndicator extends StatelessWidget {
   const SplashLoadingIndicator({
@@ -29,13 +30,9 @@ class SplashLoadingIndicator extends StatelessWidget {
           ),
           const SizedBox(height: 16),
 
-          const Text(
+          Text(
             AppStrings.splashTagline,
-            style: TextStyle(
-              color: AppColors.kTextPrimary,
-              fontSize: 14,
-              fontWeight: FontWeight.w500,
-            ),
+            style: AppStyles.splashTagline,
           ),
         ],
       ),

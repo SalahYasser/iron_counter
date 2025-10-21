@@ -13,10 +13,10 @@ class AppTheme {
     return ThemeData(
       brightness: Brightness.dark,
       primaryColor: AppColors.kPrimary,
-      scaffoldBackgroundColor: AppColors.kBackground,
+      scaffoldBackgroundColor: AppColors.kBlack,
 
       appBarTheme: const AppBarTheme(
-        backgroundColor: AppColors.kBackground,
+        backgroundColor: AppColors.kBlack,
         elevation: 0,
         foregroundColor: AppColors.kTextPrimary,
       ),
@@ -24,7 +24,7 @@ class AppTheme {
       colorScheme: const ColorScheme.dark(
         primary: AppColors.kPrimary,
         secondary: AppColors.kPrimaryDark,
-        background: AppColors.kBackground,
+        background: AppColors.kBlack,
         surface: AppColors.kSurface,
         onSurface: AppColors.kTextPrimary,
       ),
@@ -50,7 +50,7 @@ class AppTheme {
         ),
 
         bodyMedium: textTheme.bodyMedium!.copyWith(
-          color: AppColors.textSecondary,
+          color: AppColors.kWhite,
           fontWeight: FontWeight.normal,
           fontSize: 14.sp,
         ),
@@ -59,7 +59,7 @@ class AppTheme {
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
           backgroundColor: AppColors.kPrimary,
-          foregroundColor: AppColors.kBackground,
+          foregroundColor: AppColors.kBlack,
           minimumSize: Size(double.infinity, 56.h),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8.0.r),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iron_counter/core/constants/app_colors.dart';
+import 'package:iron_counter/core/constants/app_strings.dart';
+import 'package:iron_counter/core/constants/app_styles.dart';
 import 'package:iron_counter/core/widgets/custom_app_bar.dart';
 import 'package:iron_counter/features/dashboard/presentation/views/widgets/category_card.dart';
 
@@ -32,34 +34,42 @@ class DashboardViewBody extends StatelessWidget {
                     children: [
 
                       CategoryCard(
-                        title: 'Gym',
-                        subtitle: 'Weights & Strength Training',
-                        icon: Icons.fitness_center,
+                        title: AppStrings.gym,
+                        titleStyle: AppStyles.titleLarge,
+                        subtitle: AppStrings.gymSubtitle,
+                        subtitleStyle: AppStyles.bodySmall,
                         color: AppColors.kGym,
+                        icon: Icons.fitness_center,
                         iconColor: AppColors.kBlack,
                       ),
 
                       CategoryCard(
-                        title: 'Cardio',
-                        subtitle: 'Cardiovascular Exercises',
-                        icon: Icons.directions_run,
+                        title: AppStrings.cardio,
+                        titleStyle: AppStyles.titleLarge,
+                        subtitle:  AppStrings.cardioSubtitle,
+                        subtitleStyle: AppStyles.bodySmall,
                         color: AppColors.kCardio,
+                        icon: Icons.directions_run,
                         iconColor: AppColors.kBlack,
                       ),
 
                       CategoryCard(
-                        title: 'Links',
-                        subtitle: 'Useful Resources & Tips',
-                        icon: Icons.link,
+                        title: AppStrings.links,
+                        titleStyle: AppStyles.titleLarge,
+                        subtitle:  AppStrings.cardioSubtitle,
+                        subtitleStyle: AppStyles.bodySmall,
                         color: AppColors.kLinks,
+                        icon: Icons.link,
                         iconColor: AppColors.kBlack,
                       ),
 
                       CategoryCard(
-                        title: 'Foods',
-                        subtitle: 'Nutrition & Diet Plans',
-                        icon: Icons.restaurant,
+                        title:  AppStrings.foods,
+                        titleStyle: AppStyles.titleLarge,
+                        subtitle:  AppStrings.foodsSubtitle,
+                        subtitleStyle: AppStyles.bodySmall,
                         color: AppColors.kFoods,
+                        icon: Icons.restaurant,
                         iconColor: AppColors.kBlack,
                       ),
                     ],

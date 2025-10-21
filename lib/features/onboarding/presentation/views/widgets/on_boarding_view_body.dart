@@ -5,7 +5,9 @@ import 'package:iron_counter/core/constants/app_colors.dart';
 import 'package:iron_counter/core/constants/app_strings.dart';
 import 'package:iron_counter/core/constants/app_urls.dart';
 import 'package:iron_counter/core/widgets/gradient_button.dart';
+import 'package:iron_counter/core/widgets/gradient_text.dart';
 import 'package:iron_counter/features/dashboard/presentation/views/dashboard_view.dart';
+import 'package:iron_counter/core/constants/app_styles.dart';
 
 class OnBoardingViewBody extends StatelessWidget {
   const OnBoardingViewBody({super.key});
@@ -18,6 +20,7 @@ class OnBoardingViewBody extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           const Spacer(flex: 2),
+
           Center(
             child: ClipRRect(
               borderRadius: BorderRadius.circular(16.r),
@@ -44,18 +47,17 @@ class OnBoardingViewBody extends StatelessWidget {
           ),
           const Spacer(flex: 1),
 
-          Text(
-            AppStrings.onboardingTitle,
-            style: Theme.of(
-              context,
-            ).textTheme.titleLarge?.copyWith(color: AppColors.kPrimary ),
+          GradientText(
+            text: AppStrings.onboardingTitle,
+            gradient: AppColors.kPrimaryGradient,
+            style: AppStyles.onboardingTitle,
             textAlign: TextAlign.center,
           ),
           SizedBox(height: 16.r),
 
           Text(
             AppStrings.onboardingSubtitle,
-            style: Theme.of(context).textTheme.bodyMedium,
+            style: AppStyles.onboardingSubtitle,
             textAlign: TextAlign.center,
           ),
           const Spacer(flex: 3),

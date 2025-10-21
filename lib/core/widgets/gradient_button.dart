@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iron_counter/core/constants/app_colors.dart';
+import 'package:iron_counter/core/constants/app_styles.dart';
 
 class GradientButton extends StatelessWidget {
   const GradientButton({
@@ -42,7 +43,7 @@ class GradientButton extends StatelessWidget {
         onPressed: onPressed,
         child: Text(
           buttonText,
-          style: TextStyle(color: textColor ?? AppColors.kTextPrimary),
+          style: AppStyles.onboardingButton,
         ),
       ),
     );

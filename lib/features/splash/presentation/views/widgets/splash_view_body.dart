@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:iron_counter/core/helper_functions/build_app_name.dart';
 import 'package:iron_counter/features/splash/presentation/manager/cubit/splash_cubit.dart';
 import 'package:iron_counter/features/splash/presentation/manager/cubit/splash_state.dart';
-import 'package:iron_counter/features/splash/presentation/views/widgets/app_name_text.dart';
 import 'package:iron_counter/features/splash/presentation/views/widgets/splash_background.dart';
 import 'package:iron_counter/features/splash/presentation/views/widgets/splash_logo.dart';
 import 'package:iron_counter/features/splash/presentation/views/widgets/splash_loading_indicator.dart';

@@ -5,7 +5,7 @@ class AppColors {
   static const Gradient kPrimaryGradient = LinearGradient(
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
-    colors: [Color(0xFF4A148C), Color(0xFFBA68C8)],
+    colors: [ Color(0xFFBA68C8),Color(0xFF4A148C)],
   );
 
   static const Color kPurple1 = Color(0xFFE0AAFF);
@@ -20,25 +20,25 @@ class AppColors {
   static const Color kPrimaryDark = Color(0xFF6A1B9A);
 
   static const Color kTextPrimary = Color(0xFFE5E5E5);
-  static const Color textSecondary = Color(0xFFFFFFFF);
+  static Color kDisabledTextPrimary = Color(0xFFE5E5E5).withOpacity(0.7);
+  static const Color kTextSecondary = Color(0xFFB0B0B0);
+  static const Color kTextHint = Color(0xFF6C6C6C);
 
-  static const Color kBackground = Color(0xFF000000);
-  static const Color kSurface = Color(0xFF1E1E1E);
+  static const Color kWhite = Color(0xFFFFFFFF);
 
   static const Color kBlack = Color(0xFF000000);
+  static const Color kSurface = Color(0xFF1E1E1E);
   static const Color kSurfaceLight = Color(0xFF2C2C2C);
+
 
   // workout types colors
   static const Color kGym = Colors.amber;
-  // static final Color kCardio = Colors.purple[400]!;
   static final Color kCardio = Colors.blue;
   static const Color kLinks = Colors.green;
-  // static final Color kFoods = Colors.red[400]!;
-  static final Color kFoods = Colors.red[500]!;
+  static final Color kFoods = Colors.red;
 
   // Text Colors
-  static const Color kTextSecondary = Color(0xFFB0B0B0);
-  static const Color kTextHint = Color(0xFF6C6C6C);
+
 
   // Status & Utility Colors
   static const Color kSuccess = Color(0xFF4CAF50); // Green for successful actions/completions

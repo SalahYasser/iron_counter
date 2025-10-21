@@ -1,24 +1,24 @@
 class AppStrings {
 
-  static const String appName = 'Training Sync';
-  static const String firstAppName = 'Training';
-  static const String lastAppName = 'Sync';
+  static const String appName = 'TRAINING SYNC';
+  static const String firstAppName = 'TRAINING';
+  static const String lastAppName = 'SYNC';
   static const String splashTagline = 'Your Fitness Journey Starts Here...';
   static const String splashTaglineBottom = 'Elevate Your Fitness';
   static const String onboardingTitle = 'Ready to Transform?';
   static const String onboardingSubtitle =
-      'Start your fitness journey with personalized workouts and track your progress like never before.';
+      'Start your fitness journey with personalized workouts and track your progress \nlike never before.';
   static const String onboardingButton = 'Get Started';
   static const String dashboardTitle = 'Dashboard';
   static const String chooseWorkoutType = 'Choose your workout type';
   static const String gym = 'Gym';
-  static const String gymSubtitle = 'Weights & Strength Training';
+  static const String gymSubtitle = 'Weights & \nStrength Training';
   static const String cardio = 'Cardio';
-  static const String cardioSubtitle = 'Cardiovascular Exercises';
+  static const String cardioSubtitle = 'Cardiovascular \nExercises';
   static const String links = 'Links';
-  static const String linksSubtitle = 'Useful Resources & Tips';
+  static const String linksSubtitle = 'Useful Resources & \nTips';
   static const String foods = 'Foods';
-  static const String foodsSubtitle = 'Nutrition & Diet Plans';
+  static const String foodsSubtitle = 'Nutrition & \nDiet Plans';
   static const String chooseTrainingTitle = 'Choose Your Training';
   static const String selectWorkoutProgram = 'Select a workout program';
   static const String pushA = 'Push A';
