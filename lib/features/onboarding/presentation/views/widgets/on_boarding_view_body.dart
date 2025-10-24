@@ -1,76 +1,74 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iron_counter/core/constants/app_colors.dart';
 import 'package:iron_counter/core/constants/app_strings.dart';
-import 'package:iron_counter/core/constants/app_urls.dart';
+import 'package:iron_counter/core/constants/app_styles.dart';
+import 'package:iron_counter/core/helper_functions/build_linear_gradient.dart';
 import 'package:iron_counter/core/widgets/gradient_button.dart';
 import 'package:iron_counter/core/widgets/gradient_text.dart';
-import 'package:iron_counter/features/dashboard/presentation/views/dashboard_view.dart';
-import 'package:iron_counter/core/constants/app_styles.dart';
+import 'package:iron_counter/features/onboarding/presentation/manager/onboarding_cubit.dart';
+import 'package:iron_counter/features/onboarding/presentation/views/widgets/onboarding_image.dart';
 
 class OnBoardingViewBody extends StatelessWidget {
-  const OnBoardingViewBody({super.key});
+  const OnBoardingViewBody({super.key, required this.onboardingCubit});
+
+  final OnboardingCubit onboardingCubit;
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.all(24.w),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          const Spacer(flex: 2),
+    final fade = onboardingCubit.fadeIn;
+    final scale = onboardingCubit.scaleIn;
 
-          Center(
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(16.r),
-              child: CachedNetworkImage(
-                imageUrl: AppUrls.onboardingImage,
-                fit: BoxFit.cover,
-                height: 200.r,
-                placeholder: (context, url) => Container(
-                  height: 200.r,
-                  color: AppColors.kSurface,
-                  child: Center(
-                    child: const CircularProgressIndicator(
-                      color: AppColors.kPrimary,
-                    ),
+    return Container(
+      decoration: BoxDecoration(
+        gradient: buildLinearGradient(
+          colors: [
+            AppColors.kPurple7,
+            AppColors.kPurple8,
+            AppColors.kPurple9,
+            AppColors.kPurple10,
+          ],
+        ),
+      ),
+      child: SafeArea(
+        child: FadeTransition(
+          opacity: fade,
+          child: ScaleTransition(
+            scale: scale,
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 24.h),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Spacer(flex: 2),
+                  const OnboardingImage(),
+                  const Spacer(flex: 1),
+
+                  GradientText(
+                    text: AppStrings.onboardingTitle,
+                    gradient: AppColors.kPrimaryGradient,
+                    style: AppStyles.onboardingTitle,
+                    textAlign: TextAlign.center,
                   ),
-                ),
-                errorWidget: (context, url, error) => Icon(
-                  Icons.fitness_center,
-                  size: 200.w,
-                  color: AppColors.kPrimary,
-                ),
+                  SizedBox(height: 16.r),
+
+                  Text(
+                    AppStrings.onboardingSubtitle,
+                    style: AppStyles.onboardingSubtitle,
+                    textAlign: TextAlign.center,
+                  ),
+                  const Spacer(flex: 3),
+
+                  GradientButton(
+                    onPressed: onboardingCubit.navigateToDashboard,
+                    buttonText: AppStrings.onboardingButton,
+                    textColor: AppColors.kTextPrimary,
+                  ),
+                ],
               ),
             ),
           ),
-          const Spacer(flex: 1),
-
-          GradientText(
-            text: AppStrings.onboardingTitle,
-            gradient: AppColors.kPrimaryGradient,
-            style: AppStyles.onboardingTitle,
-            textAlign: TextAlign.center,
-          ),
-          SizedBox(height: 16.r),
-
-          Text(
-            AppStrings.onboardingSubtitle,
-            style: AppStyles.onboardingSubtitle,
-            textAlign: TextAlign.center,
-          ),
-          const Spacer(flex: 3),
-
-          GradientButton(
-            onPressed: () {
-              Navigator.pushNamed(context, DashboardView.routeName);
-            },
-            buttonText: AppStrings.onboardingButton,
-            textColor: AppColors.kTextPrimary,
-          ),
-          SizedBox(height: 20.r),
-        ],
+        ),
       ),
     );
   }
