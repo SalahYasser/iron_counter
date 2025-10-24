@@ -46,7 +46,7 @@ class AppStyles {
   // Onboarding Screen Text Styles
   static TextStyle onboardingTitle = TextStyle(
     fontFamily: fontFamily,
-    fontSize: 22.sp, // Based on titleLarge from theme
+    fontSize: 24.sp, // Based on titleLarge from theme
     fontWeight: FontWeight.w700,
     color: AppColors.kPrimary,
   );

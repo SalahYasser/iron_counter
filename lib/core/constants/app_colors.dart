@@ -5,7 +5,7 @@ class AppColors {
   static const Gradient kPrimaryGradient = LinearGradient(
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
-    colors: [kPurple3, kPurple8],
+    colors: [kPurple3, kPurple7],
   );
 
   static const Color kPrimary = kPurple3;
