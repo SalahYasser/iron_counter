@@ -9,6 +9,6 @@ class GetDashboardDataUseCase {
   final DashboardRepo dashboardRepo;
 
   Future<Either<Failure, List<DashboardEntity>>> call() async {
-    return await dashboardRepo.getDashboardData();
+    return await dashboardRepo.getDashboardCategories();
   }
 }

@@ -10,22 +10,31 @@ import 'package:training_sync/features/splash/presentation/manager/cubit/splash_
 final GetIt getIt = GetIt.instance;
 
 Future<void> setupGetIt() async {
-  // Cubits
-  getIt.registerFactory(() => SplashCubit());
+  // ==== Splash Feature ====
+  getIt.registerFactory<SplashCubit>(() => SplashCubit());
 
-  // getIt.registerFactory(() => OnboardingCubit());
+  // ==== Onboarding Feature ====
   getIt.registerLazySingleton<OnboardingCubit>(() => OnboardingCubit());
 
-  // 🧩 Data
-  getIt.registerLazySingleton<DashboardDataSource>(() => DashboardLocalDataSource());
+  // ==== Dashboard Feature ====
+
+  // Data source
+  getIt.registerLazySingleton<DashboardDataSource>(
+    () => DashboardLocalDataSource(),
+  );
+
+  // Repo
   getIt.registerLazySingleton<DashboardRepo>(
-          () => DashboardRepoImpl(getIt<DashboardDataSource>()));
+    () => DashboardRepoImpl(getIt<DashboardDataSource>()),
+  );
 
-  // 🧠 Domain
+  // Use case
   getIt.registerLazySingleton<GetDashboardDataUseCase>(
-          () => GetDashboardDataUseCase(getIt<DashboardRepo>()));
+    () => GetDashboardDataUseCase(getIt<DashboardRepo>()),
+  );
 
-  // 🎯 Presentation
-  getIt.registerFactory(() => DashboardCubit(getIt<GetDashboardDataUseCase>()));
-
+  // Cubit
+  getIt.registerFactory<DashboardCubit>(
+    () => DashboardCubit(getIt<GetDashboardDataUseCase>()),
+  );
 }
