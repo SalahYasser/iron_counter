@@ -41,7 +41,7 @@ class _OnBoardingViewState extends State<OnBoardingView>
         if (state is OnboardingNavigate) {
           Navigator.pushReplacementNamed(context, DashboardView.routeName);
 
-        } else if (state is OnboardingError) {
+        } else if (state is OnboardingFailure) {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(content: Text(state.failure.message ?? "Unknown error")),
           );
@@ -51,7 +51,7 @@ class _OnBoardingViewState extends State<OnBoardingView>
       builder: (context, state) {
         return Scaffold(
           body: SafeArea(
-            child: OnBoardingViewBody(onboardingCubit: onboardingCubit), // ✅ pass the cubit
+            child: OnBoardingViewBody(onboardingCubit: onboardingCubit),
           ),
         );
       },

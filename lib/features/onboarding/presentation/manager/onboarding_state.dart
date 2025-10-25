@@ -13,8 +13,8 @@ class OnboardingAnimate extends OnboardingState {}
 
 class OnboardingNavigate extends OnboardingState {}
 
-class OnboardingError extends OnboardingState {
-  const OnboardingError(this.failure);
+class OnboardingFailure extends OnboardingState {
+  const OnboardingFailure(this.failure);
 
   final Failure failure;
 }

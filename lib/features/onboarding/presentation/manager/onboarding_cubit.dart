@@ -34,7 +34,7 @@ class OnboardingCubit extends Cubit<OnboardingState> {
 
       controller.forward();
     } catch (e) {
-      emit(OnboardingError(const Failure("Animation initialization failed")));
+      emit(OnboardingFailure(const Failure("Animation initialization failed")));
     }
   }
 
