@@ -1,20 +1,22 @@
-import 'package:bloc/bloc.dart';
-import 'package:dartz/dartz.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:training_sync/features/dashboard/domain/usecases/get_dashboard_data_usecase.dart';
 import 'dashboard_state.dart';
-import 'package:iron_counter/core/error/failure.dart';
 
 class DashboardCubit extends Cubit<DashboardState> {
-  DashboardCubit() : super(DashboardInitial());
+  DashboardCubit(this.getDashboardDataUseCase) : super(DashboardInitial());
 
-  Future<void> loadDashboardData() async {
+  final GetDashboardDataUseCase getDashboardDataUseCase;
+
+  Future<void> fetchDashboardData() async {
+
     emit(DashboardLoading());
-    await Future.delayed(const Duration(seconds: 1));
+    await Future.delayed(const Duration(milliseconds: 200));
 
-    try {
-      // Simulate success — replace with actual data fetching later
-      emit(DashboardLoaded());
-    } catch (e) {
-      emit(DashboardError(const Failure('Failed to load dashboard')));
-    }
+    final result = await getDashboardDataUseCase.call();
+
+    result.fold(
+      (failure) => emit(DashboardFailure(failure.message ?? "Unknown error")),
+      (data) => emit(DashboardSuccessful(data)),
+    );
   }
 }

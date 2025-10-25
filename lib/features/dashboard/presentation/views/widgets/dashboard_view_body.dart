@@ -1,61 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'dashboard_background.dart';
-import 'dashboard_header.dart';
+import 'package:training_sync/features/dashboard/presentation/manager/dashboard_cubit/dashboard_cubit.dart';
+import 'package:training_sync/features/dashboard/presentation/manager/dashboard_cubit/dashboard_state.dart';
+import 'package:training_sync/features/dashboard/presentation/views/widgets/dashboard_header.dart';
 import 'category_card.dart';
-import 'package:iron_counter/core/constants/app_colors.dart';
-import 'package:iron_counter/core/constants/app_strings.dart';
-import 'package:iron_counter/core/constants/app_styles.dart';
 
 class DashboardViewBody extends StatelessWidget {
   const DashboardViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final categories = [
-      {
-        'title': AppStrings.gym,
-        'subtitle': AppStrings.gymSubtitle,
-        'icon': Icons.fitness_center,
-        'color': AppColors.kAmber6,
-        'gradient': [AppColors.kAmber3, AppColors.kAmber6, AppColors.kAmber9],
-      },
-      {
-        'title': AppStrings.cardio,
-        'subtitle': AppStrings.cardioSubtitle,
-        'icon': Icons.directions_run,
-        'color': AppColors.kBlue6,
-        'gradient': [AppColors.kBlue3, AppColors.kBlue6, AppColors.kBlue9],
-      },
-      {
-        'title': AppStrings.links,
-        'subtitle': AppStrings.linksSubtitle,
-        'icon': Icons.link,
-        'color': AppColors.kGreen6,
-        'gradient': [AppColors.kGreen3, AppColors.kGreen6, AppColors.kGreen9],
-      },
-      {
-        'title': AppStrings.foods,
-        'subtitle': AppStrings.foodsSubtitle,
-        'icon': Icons.restaurant,
-        'color': AppColors.kRed6,
-        'gradient': [AppColors.kRed3, AppColors.kRed6, AppColors.kRed9],
-      },
-    ];
-
-    return Stack(
-      children: [
-        const DashboardBackground(),
-        SafeArea(
-          child: Column(
+    return BlocBuilder<DashboardCubit, DashboardState>(
+      builder: (context, state) {
+        if (state is DashboardLoading) {
+          return const Center(child: CircularProgressIndicator());
+        } else if (state is DashboardSuccessful) {
+          return Column(
             children: [
-              const DashboardHeader(),
+              DashboardHeader(),
               SizedBox(height: 10.h),
+
               Expanded(
                 child: GridView.builder(
                   padding: EdgeInsets.all(20.w),
-                  physics: const BouncingScrollPhysics(),
-                  itemCount: categories.length,
+                  itemCount: state.categories.length,
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
                     crossAxisSpacing: 16.w,
@@ -63,25 +32,26 @@ class DashboardViewBody extends StatelessWidget {
                     childAspectRatio: 0.78,
                   ),
                   itemBuilder: (context, index) {
-                    final category = categories[index];
+                    final category = state.categories[index];
+
                     return CategoryCard(
-                      title: category['title'] as String,
-                      subtitle: category['subtitle'] as String,
-                      icon: category['icon'] as IconData,
-                      color: category['color'] as Color,
-                      iconColor: AppColors.kBlack,
-                      titleStyle: AppStyles.categoryTitle,
-                      subtitleStyle: AppStyles.dashboardSubtitle,
-                      gradientColors: category['gradient'] as List<Color>,
+                      title: category.title,
+                      subtitle: category.subtitle,
+                      icon: category.icon,
+                      color: category.color,
+                      gradientColors: category.gradientColors,
                       delay: index * 200,
                     );
                   },
                 ),
               ),
             ],
-          ),
-        ),
-      ],
+          );
+        } else if (state is DashboardFailure) {
+          return Center(child: Text(state.message));
+        }
+        return const SizedBox.shrink();
+      },
     );
   }
 }

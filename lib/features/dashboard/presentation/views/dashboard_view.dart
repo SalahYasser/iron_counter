@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../manager/dashboard_cubit/dashboard_cubit.dart';
-import '../manager/dashboard_cubit/dashboard_state.dart';
-import 'widgets/dashboard_view_body.dart';
+import 'package:training_sync/core/services/get_it_service.dart';
+import 'package:training_sync/features/dashboard/presentation/manager/dashboard_cubit/dashboard_cubit.dart';
+import 'package:training_sync/features/dashboard/presentation/views/widgets/dashboard_background.dart';
+import 'package:training_sync/features/dashboard/presentation/views/widgets/dashboard_view_body.dart';
 
 class DashboardView extends StatelessWidget {
   const DashboardView({super.key});
@@ -12,25 +13,14 @@ class DashboardView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (_) => DashboardCubit()..loadDashboardData(),
-      child: Scaffold(
+      create: (context) => getIt<DashboardCubit>()..fetchDashboardData(),
+      child: const Scaffold(
         extendBodyBehindAppBar: true,
-        body: BlocBuilder<DashboardCubit, DashboardState>(
-          builder: (context, state) {
-            if (state is DashboardLoading) {
-              return const Center(child: CircularProgressIndicator());
-            } else if (state is DashboardError) {
-              return Center(
-                child: Text(
-                  state.failure.message ?? 'Something went wrong',
-                  style: const TextStyle(color: Colors.red),
-                ),
-              );
-            } else if (state is DashboardLoaded) {
-              return const DashboardViewBody();
-            }
-            return const SizedBox.shrink();
-          },
+        body: Stack(
+          children: [
+            DashboardBackground(),
+            SafeArea(child: DashboardViewBody()),
+          ],
         ),
       ),
     );

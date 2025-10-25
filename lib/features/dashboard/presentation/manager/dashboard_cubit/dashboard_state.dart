@@ -1,9 +1,7 @@
 import 'package:equatable/equatable.dart';
-import 'package:iron_counter/core/error/failure.dart';
+import 'package:training_sync/features/dashboard/domain/entities/dashboard_entity.dart';
 
 abstract class DashboardState extends Equatable {
-  const DashboardState();
-
   @override
   List<Object?> get props => [];
 }
@@ -12,12 +10,20 @@ class DashboardInitial extends DashboardState {}
 
 class DashboardLoading extends DashboardState {}
 
-class DashboardLoaded extends DashboardState {}
+class DashboardSuccessful extends DashboardState {
+  DashboardSuccessful(this.categories);
 
-class DashboardError extends DashboardState {
-  final Failure failure;
-  const DashboardError(this.failure);
+  final List<DashboardEntity> categories;
 
   @override
-  List<Object?> get props => [failure];
+  List<Object?> get props => [categories];
+}
+
+class DashboardFailure extends DashboardState {
+  DashboardFailure(this.message);
+
+  final String message;
+
+  @override
+  List<Object?> get props => [message];
 }
