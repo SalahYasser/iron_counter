@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:iron_counter/core/constants/app_colors.dart';
-import 'package:iron_counter/core/constants/app_strings.dart';
-import 'package:iron_counter/core/constants/app_styles.dart';
-import 'package:iron_counter/core/helper_functions/build_linear_gradient.dart';
-import 'package:iron_counter/core/widgets/gradient_button.dart';
-import 'package:iron_counter/core/widgets/gradient_text.dart';
-import 'package:iron_counter/features/onboarding/presentation/manager/onboarding_cubit.dart';
-import 'package:iron_counter/features/onboarding/presentation/views/widgets/onboarding_image.dart';
+import 'package:training_sync/core/constants/app_colors.dart';
+import 'package:training_sync/core/constants/app_strings.dart';
+import 'package:training_sync/core/constants/app_styles.dart';
+import 'package:training_sync/core/helper_functions/build_linear_gradient.dart';
+import 'package:training_sync/core/widgets/gradient_button.dart';
+import 'package:training_sync/core/widgets/gradient_text.dart';
+import 'package:training_sync/features/onboarding/presentation/manager/onboarding_cubit.dart';
+import 'package:training_sync/features/onboarding/presentation/views/widgets/onboarding_image.dart';
 
 class OnBoardingViewBody extends StatelessWidget {
   const OnBoardingViewBody({super.key, required this.onboardingCubit});

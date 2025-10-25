@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:iron_counter/features/onboarding/presentation/views/on_boarding_view.dart';
-import 'package:iron_counter/features/splash/presentation/manager/cubit/splash_cubit.dart';
-import 'package:iron_counter/features/splash/presentation/manager/cubit/splash_state.dart';
-import 'package:iron_counter/features/splash/presentation/views/widgets/splash_view_body.dart';
+import 'package:training_sync/features/onboarding/presentation/views/on_boarding_view.dart';
+import 'package:training_sync/features/splash/presentation/manager/cubit/splash_cubit.dart';
+import 'package:training_sync/features/splash/presentation/manager/cubit/splash_state.dart';
+import 'package:training_sync/features/splash/presentation/views/widgets/splash_view_body.dart';
 
 class SplashView extends StatelessWidget {
   const SplashView({super.key});

@@ -1,7 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:iron_counter/core/constants/app_colors.dart';
-import 'package:iron_counter/core/helper_functions/build_linear_gradient.dart';
+import 'package:training_sync/core/constants/app_colors.dart';
+import 'package:training_sync/core/helper_functions/build_linear_gradient.dart';
 
 class DashboardBackground extends StatelessWidget {
   const DashboardBackground({super.key});

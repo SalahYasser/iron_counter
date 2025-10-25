@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:iron_counter/core/constants/app_colors.dart';
+import 'package:training_sync/core/constants/app_colors.dart';
 
 class AppStyles {
   // Font family constant
@@ -110,7 +110,7 @@ class AppStyles {
     letterSpacing: 0.5,
   );
 
-  static TextStyle dashboardSubtitle = TextStyle(
+  static TextStyle categorySubtitle = TextStyle(
     fontFamily: fontFamily,
     fontSize: 13.sp,
     fontWeight: FontWeight.w500,

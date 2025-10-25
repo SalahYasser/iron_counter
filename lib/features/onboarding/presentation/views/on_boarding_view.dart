@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:iron_counter/core/services/get_it_service.dart';
-import 'package:iron_counter/features/dashboard/presentation/views/dashboard_view.dart';
-import 'package:iron_counter/features/onboarding/presentation/manager/onboarding_cubit.dart';
-import 'package:iron_counter/features/onboarding/presentation/views/widgets/on_boarding_view_body.dart';
+import 'package:training_sync/core/services/get_it_service.dart';
+import 'package:training_sync/features/dashboard/presentation/views/dashboard_view.dart';
+import 'package:training_sync/features/onboarding/presentation/manager/onboarding_cubit.dart';
+import 'package:training_sync/features/onboarding/presentation/views/widgets/on_boarding_view_body.dart';
 
 class OnBoardingView extends StatefulWidget {
   const OnBoardingView({super.key});

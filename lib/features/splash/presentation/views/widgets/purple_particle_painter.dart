@@ -1,6 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:iron_counter/core/constants/app_colors.dart';
+import 'package:training_sync/core/constants/app_colors.dart';
 
 class PurpleParticlePainter extends CustomPainter {
   PurpleParticlePainter()

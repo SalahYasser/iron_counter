@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:iron_counter/core/constants/app_colors.dart';
-import 'package:iron_counter/core/helper_functions/build_linear_gradient.dart';
+import 'package:training_sync/core/constants/app_colors.dart';
+import 'package:training_sync/core/helper_functions/build_linear_gradient.dart';
 
 class SplashLogo extends StatelessWidget {
   const SplashLogo({

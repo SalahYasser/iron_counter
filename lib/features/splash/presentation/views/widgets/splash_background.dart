@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:iron_counter/core/constants/app_colors.dart';
-import 'package:iron_counter/core/constants/app_strings.dart';
-import 'package:iron_counter/core/constants/app_styles.dart';
-import 'package:iron_counter/core/helper_functions/build_linear_gradient.dart';
-import 'package:iron_counter/features/splash/presentation/views/widgets/purple_particle_painter.dart';
+import 'package:training_sync/core/constants/app_colors.dart';
+import 'package:training_sync/core/constants/app_strings.dart';
+import 'package:training_sync/core/constants/app_styles.dart';
+import 'package:training_sync/core/helper_functions/build_linear_gradient.dart';
+import 'package:training_sync/features/splash/presentation/views/widgets/purple_particle_painter.dart';
 
 class SplashBackground extends StatelessWidget {
   const SplashBackground({super.key});

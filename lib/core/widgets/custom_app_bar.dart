@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:iron_counter/core/constants/app_colors.dart';
-import 'package:iron_counter/core/constants/app_strings.dart';
-import 'package:iron_counter/core/constants/app_styles.dart';
+import 'package:training_sync/core/constants/app_colors.dart';
+import 'package:training_sync/core/constants/app_strings.dart';
+import 'package:training_sync/core/constants/app_styles.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({super.key});
@@ -30,13 +30,13 @@ class CustomAppBar extends StatelessWidget {
                   children: [
                     Text(
                       AppStrings.dashboardTitle,
-                      style: AppStyles.categoryTitle,
+                      style: AppStyles.dashboardTitle,
                     ),
                     SizedBox(height: 4.h),
 
                     Text(
                       AppStrings.chooseWorkoutType,
-                      style: AppStyles.dashboardSubtitle,
+                      style: AppStyles.categorySubtitle,
                     ),
                   ],
                 ),

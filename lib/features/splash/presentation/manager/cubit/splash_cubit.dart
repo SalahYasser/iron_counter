@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:math';
 import 'package:bloc/bloc.dart';
-import 'package:iron_counter/features/splash/presentation/manager/cubit/splash_state.dart';
+import 'package:training_sync/features/splash/presentation/manager/cubit/splash_state.dart';
 
 class SplashCubit extends Cubit<SplashState> {
   SplashCubit() : super(const SplashState());

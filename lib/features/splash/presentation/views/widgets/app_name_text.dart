@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:iron_counter/core/constants/app_colors.dart';
-import 'package:iron_counter/core/constants/app_strings.dart';
-import 'package:iron_counter/core/constants/app_styles.dart';
-import 'package:iron_counter/core/helper_functions/build_linear_gradient.dart';
-import 'package:iron_counter/core/widgets/gradient_text.dart';
+import 'package:training_sync/core/constants/app_colors.dart';
+import 'package:training_sync/core/constants/app_strings.dart';
+import 'package:training_sync/core/constants/app_styles.dart';
+import 'package:training_sync/core/helper_functions/build_linear_gradient.dart';
+import 'package:training_sync/core/widgets/gradient_text.dart';
 
 class AppNameText extends StatelessWidget {
   const AppNameText({super.key});

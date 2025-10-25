@@ -9,7 +9,7 @@ class AppStrings {
   static const String onboardingSubtitle =
       'Start your fitness journey with personalized workouts and track your progress \nlike never before.';
   static const String onboardingButton = 'Get Started';
-  static const String dashboardTitle = 'Dashboard';
+  static const String dashboardTitle = 'TRAINING SYNC';
   static const String chooseWorkoutType = 'Choose your workout type';
   static const String gym = 'Gym';
   static const String gymSubtitle = 'Weights & Strength Training';

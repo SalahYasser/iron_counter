@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:iron_counter/core/constants/app_colors.dart';
-import 'package:iron_counter/core/constants/app_strings.dart';
-import 'package:iron_counter/core/constants/app_styles.dart';
+import 'package:training_sync/core/constants/app_colors.dart';
+import 'package:training_sync/core/constants/app_strings.dart';
+import 'package:training_sync/core/constants/app_styles.dart';
 
 class SplashLoadingIndicator extends StatelessWidget {
   const SplashLoadingIndicator({
