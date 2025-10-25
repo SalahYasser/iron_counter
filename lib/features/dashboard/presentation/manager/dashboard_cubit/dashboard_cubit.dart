@@ -7,16 +7,17 @@ class DashboardCubit extends Cubit<DashboardState> {
 
   final GetDashboardDataUseCase getDashboardDataUseCase;
 
-  Future<void> fetchDashboardData() async {
-
+  Future<void> loadDashboard() async {
     emit(DashboardLoading());
     await Future.delayed(const Duration(milliseconds: 200));
 
     final result = await getDashboardDataUseCase.call();
 
     result.fold(
-      (failure) => emit(DashboardFailure(failure.message ?? "Unknown error")),
-      (data) => emit(DashboardSuccessful(data)),
+      (failure) => emit(
+        DashboardFailure(errMessage: failure.message ?? "Unknown error"),
+      ),
+      (categories) => emit(DashboardSuccessful(categories: categories)),
     );
   }
 }

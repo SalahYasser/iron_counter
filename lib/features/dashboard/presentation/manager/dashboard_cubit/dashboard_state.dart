@@ -11,7 +11,7 @@ class DashboardInitial extends DashboardState {}
 class DashboardLoading extends DashboardState {}
 
 class DashboardSuccessful extends DashboardState {
-  DashboardSuccessful(this.categories);
+  DashboardSuccessful({required this.categories});
 
   final List<DashboardEntity> categories;
 
@@ -20,10 +20,10 @@ class DashboardSuccessful extends DashboardState {
 }
 
 class DashboardFailure extends DashboardState {
-  DashboardFailure(this.message);
+  DashboardFailure({required this.errMessage});
 
-  final String message;
-
+  final String errMessage;
+  
   @override
-  List<Object?> get props => [message];
+  List<Object?> get props => [errMessage];
 }

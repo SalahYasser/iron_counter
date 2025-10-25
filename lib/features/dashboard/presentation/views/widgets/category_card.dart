@@ -4,23 +4,16 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:training_sync/core/constants/app_colors.dart';
 import 'package:training_sync/core/constants/app_styles.dart';
 import 'package:training_sync/core/helper_functions/build_linear_gradient.dart';
+import 'package:training_sync/features/dashboard/domain/entities/dashboard_entity.dart';
 
 class CategoryCard extends StatelessWidget {
   const CategoryCard({
     super.key,
-    required this.title,
-    required this.subtitle,
-    required this.icon,
-    required this.color,
-    required this.gradientColors,
+    required this.dashboardEntity,
     required this.delay,
   });
 
-  final String title;
-  final String subtitle;
-  final IconData icon;
-  final Color color;
-  final List<Color> gradientColors;
+  final DashboardEntity dashboardEntity;
   final int delay;
 
   @override
@@ -28,10 +21,12 @@ class CategoryCard extends StatelessWidget {
     return Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(24.r),
-            gradient: buildLinearGradient(colors: gradientColors),
+            gradient: buildLinearGradient(
+              colors: dashboardEntity.gradientColors,
+            ),
             boxShadow: [
               BoxShadow(
-                color: gradientColors.last.withOpacity(0.25),
+                color: dashboardEntity.gradientColors.last.withOpacity(0.25),
                 blurRadius: 10,
                 spreadRadius: 1,
                 offset: const Offset(0, 4),
@@ -42,7 +37,8 @@ class CategoryCard extends StatelessWidget {
             color: Colors.transparent,
             child: InkWell(
               borderRadius: BorderRadius.circular(24.r),
-              onTap: () => debugPrint('$title tapped'),
+              onTap: () => debugPrint('${dashboardEntity.title} tapped'),
+
               child: Padding(
                 padding: EdgeInsets.all(16.w),
                 child: Column(
@@ -60,7 +56,11 @@ class CategoryCard extends StatelessWidget {
                           ),
                           shape: BoxShape.circle,
                         ),
-                        child: Icon(icon, color: AppColors.kBlack, size: 24.w),
+                        child: Icon(
+                          dashboardEntity.icon,
+                          color: AppColors.kBlack,
+                          size: 24.w,
+                        ),
                       ),
                     ),
 
@@ -68,11 +68,14 @@ class CategoryCard extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(title, style: AppStyles.categoryTitle),
+                        Text(
+                          dashboardEntity.title,
+                          style: AppStyles.categoryTitle,
+                        ),
                         SizedBox(height: 2.h),
 
                         Text(
-                          subtitle,
+                          dashboardEntity.subtitle,
                           style: AppStyles.categorySubtitle,
                           maxLines: 2,
                           overflow: TextOverflow.ellipsis,
