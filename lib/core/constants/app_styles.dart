@@ -75,15 +75,23 @@ class AppStyles {
 
   static TextStyle dashboardTitle = TextStyle(
     fontFamily: fontFamily,
-    fontSize: 22.sp,
+    fontSize: 24.sp,
     fontWeight: FontWeight.w700,
     letterSpacing: 0.5,
+    shadows: [
+      const Shadow(
+        color: AppColors.kBlack,
+        blurRadius: 12,
+        offset: Offset(2, 2),
+      ),
+    ],
   );
 
-  static TextStyle headlineSmall = TextStyle(
+  static TextStyle categoryTitle = TextStyle(
     fontFamily: fontFamily,
     fontSize: 20.sp,
-    fontWeight: FontWeight.w600,
+    fontWeight: FontWeight.w700,
+    color: AppColors.kBlack,
     letterSpacing: 1.0,
   );
 
@@ -106,7 +114,7 @@ class AppStyles {
     fontFamily: fontFamily,
     fontSize: 13.sp,
     fontWeight: FontWeight.w500,
-    color: AppColors.kDisabledTextPrimary,
+    color: AppColors.kSurfaceLight,
     // letterSpacing: 0.9,
   );
 

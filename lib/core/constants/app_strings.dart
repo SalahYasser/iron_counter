@@ -12,13 +12,13 @@ class AppStrings {
   static const String dashboardTitle = 'Dashboard';
   static const String chooseWorkoutType = 'Choose your workout type';
   static const String gym = 'Gym';
-  static const String gymSubtitle = 'Weights & \nStrength Training';
+  static const String gymSubtitle = 'Weights & Strength Training';
   static const String cardio = 'Cardio';
-  static const String cardioSubtitle = 'Cardiovascular \nExercises';
+  static const String cardioSubtitle = 'Cardiovascular Exercises';
   static const String links = 'Links';
-  static const String linksSubtitle = 'Useful Resources & \nTips';
+  static const String linksSubtitle = 'Useful Resources & Tips';
   static const String foods = 'Foods';
-  static const String foodsSubtitle = 'Nutrition & \nDiet Plans';
+  static const String foodsSubtitle = 'Nutrition & Diet Plans';
   static const String chooseTrainingTitle = 'Choose Your Training';
   static const String selectWorkoutProgram = 'Select a workout program';
   static const String pushA = 'Push A';

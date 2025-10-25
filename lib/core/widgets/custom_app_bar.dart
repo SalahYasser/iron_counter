@@ -30,7 +30,7 @@ class CustomAppBar extends StatelessWidget {
                   children: [
                     Text(
                       AppStrings.dashboardTitle,
-                      style: AppStyles.dashboardTitle,
+                      style: AppStyles.categoryTitle,
                     ),
                     SizedBox(height: 4.h),
 
